@@ -7,33 +7,39 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="get">
-        <label for="nombre">Nombre</label>
+    <h1>Formulario</h1>
+    <form action="success.html" method="get">
+        <label for="nombre">Nombre</label><br>
         <input type="text" name="nombre" id="nombre">
         <br>
         <br>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email">
-        <br>
-        <label for="compartir">Compartir Email</label>
-        <input type="checkbox" value="compartir">
+        <label for="direccion">Dirección</label><br>
+        <input type="text" name="direccion" id="direccion">
         <br>
         <br>
-        <label for="fecha_nacimiento">Fecha de nacimiento</label>
-        <input type="date" name="fecha_nacimiento" id="fecha_nacimiento">
+        <label for="eleccion_especialidad">Especialidad Médica</label><br>
+        <input name="eleccion_especialidad" id="eleccion_especialidad" list="especialidad">
+        <datalist id="especialidad">
+            <option value="Medicina Interna"></option>
+            <option value="Medicina General"></option>
+            <option value="Traumatologia"></option>
+            <option value="Nutricionista"></option>
+        </datalist>
         <br>
         <br>
-        <label for="color">Elija una de los siguientes colores</label>
-        <br>
-        <label for="rojo">Rojo</label>
-        <input type="radio" name="color" value="rojo" id="rojo">
-        <label for="azul">Azul</label>
-        <input type="radio" name="color" value="azul" id="azul">
-        <label for="verde">Verde</label>
-        <input type="radio" name="color" value="verde"  id="verde">
+        <label for="hora">Hora</label><br>
+        <input type="time" name="hora" id="hora" min="09:00" max="18:00">
         <br>
         <br>
-        <label></label>
+        <label for="fecha">Fecha</label><br>
+        <input type="date" id="fecha" name="fecha">
+        <br>
+        <br>
+        <label for="email">Email</label><br>
+        <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        <br>
+        <br>
+        <input type="submit" value="Confirmar">
     </form>
 </body>
 </html>
